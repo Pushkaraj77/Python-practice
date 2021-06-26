@@ -1,0 +1,9 @@
+#lets start coding
+print("Welcome to Python learning")
+'''
+Date 26 Jun 2021
+Pushkaraj Code File 
+End of multiline comment
+'''
+print("This project is for learning comment, print and end")
+print("Let's test the command",end=".The end")
