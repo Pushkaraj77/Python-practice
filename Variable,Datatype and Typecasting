@@ -1,0 +1,38 @@
+print("Now initiating Practice for Variable")
+a=22 #Variable storing an print("Now initiating Practice for Variable")
+a=22 #Variable storing an integer
+b=12.5 #Variable storing decimal no.
+#Making A Calculator 
+print(end="\n")
+print("Welcome to my Calculator")
+print(end="\n")
+print("Enter first no.:")
+num1=input()
+print("Enter second no.:")
+num2=input()
+print("Your answer is...")
+print(int(num1)+int(num2))
+#This is simple addition of numbers
+var1=54
+var2=27
+print(end="\n")
+print(var1+var2)
+#this will print the sum of the two var
+'''
+WHILE ADDING NOTICE THAT VAR ARE OF SAME TYPE
+'''
+#Following is the example of potential error when var type is different
+'''
+var3="Hi"
+var4=64
+'''
+#here if var3 and var4 are added with command print then it will show error
+print(end="\n")
+print("Typecasting of diff data types")
+'''
+Var or datatypes can also be defined using _ or letters
+'''
+abc="hi"
+xyz=" 99"
+print(end="\n")
+print(abc+str(xyz))
