@@ -1,0 +1,20 @@
+#String Functions
+print("Types of functions")
+print (end="\n")
+A1= "my name is Pushkaraj"
+print(A1.endswith("me"))
+#Checks true or false
+print(A1.count("a"))
+#counts no. of given argument
+print(A1.capitalize())
+#Capitalises first letter of string NEEDS NO ARGUMENT
+print(A1.upper())
+#prints whole string in upper case
+print(A1.lower())
+#prints whole string in lower case
+print (A1.find("Pushkaraj"))
+#displays the position of argument in the string
+print(A1.replace("my","His"))
+#replaces an argument
+print(len(A1))
+#Gives total no. of characters in string
