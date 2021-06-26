@@ -1,0 +1,9 @@
+String Slicing
+print("String Slicing practice")
+print(end="\n")
+Var1= "Simultaneously"
+print(Var1[0:5])
+print(Var1[0:])
+print(Var1[2:7:3])
+print(Var1[:-5:2])
+print(Var1[0:6:1])
