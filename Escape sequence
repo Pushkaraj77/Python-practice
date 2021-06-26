@@ -1,0 +1,14 @@
+print("Now initiating Escape sequence")
+print("Escape:1 using \\n command")
+print("I need a laptop, specifications are\n 16GB ram\n Ryzen 5900X \n RTX 3090 ")
+#\n is used to create list
+print("Test afterline for \\n")
+#Test successful for afterline \n
+print("Escape:2 using \\t command")
+print("Used\tfor space or tab")
+#\t is used to provide a tab between words
+print ("Test afterline for \\t")
+#Test successful for afterline \t
+print("Escape:3 using \\\, \' and \"")
+print("Test afterline for Escape 3")
+#Test successful for afterline escape 3
