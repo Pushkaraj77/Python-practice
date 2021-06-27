@@ -1,0 +1,41 @@
+#String Functions
+print("Types of functions")
+print (end="\n")
+A1= "my name is Pushkaraj"
+print(A1.endswith("me"))
+#Checks true or false
+print(end="\n")
+print(A1.count("a"))
+#counts no. of given argument
+print(end="\n")
+print(A1.capitalize())
+#Capitalises first letter of string NEEDS NO ARGUMENT
+print(end="\n")
+print(A1.upper())
+#prints whole string in upper case NEEDS NO ARGUMENT
+print(end="\n")
+print(A1.lower())
+#prints whole string in lower case NEEDS NO ARGUMENT
+print(end="\n")
+print (A1.find("Pushkaraj"))
+#displays the position of argument in the string
+print(end="\n")
+print(A1.replace("my","His"))
+#replaces an argument
+print(end="\n")
+print(len(A1))
+#Gives total no. of characters in string
+print(end="\n")
+print(A1.casefold())
+#converts All types of cases into lower(multilingual) NEEDS NO ARGUMENT
+print(end="\n")
+print(A1.center(40))
+#gives position to the string
+print(end="\n")
+print(A1.center(40,'*'))
+#fillchar sub operation of center,fills the gap
+print(end="\n")
+A2= "I'm\tlearning\tpython"
+print(A2.expandtabs(12))
+#expands the tab size
+print(end="\n")
