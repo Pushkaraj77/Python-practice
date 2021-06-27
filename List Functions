@@ -1,0 +1,34 @@
+Heading="List functions"
+print(Heading.center(40))
+print(end="\n")
+list1=['ram','8','GB','card','last']
+print(list1[3])
+var1=[1,2,5,7,6,9,]
+var1.remove(5)
+print(var1)
+#removes the argument
+var1.pop()
+print(var1)
+#removes last argument
+var1.sort()
+print(var1)
+#puts in ascending order
+var1.reverse()
+print(var1)
+#reverses the order
+var1.append(45)
+print(var1)
+#adds argument at the end
+var1.insert(2,76)
+print(var1)
+#inserts argument according to given position
+a=5
+b=7
+print(a,b)
+a,b=b,a
+print(a,b)
+#list slicing similar
+print("tuples".center(40))
+tup1=(1,3,2,7,6,8)
+print(end="\n")
+print(tup1)
