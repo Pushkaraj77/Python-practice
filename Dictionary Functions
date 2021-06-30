@@ -1,0 +1,40 @@
+print("Python Dictionary".center(42,'*'))
+D1={}
+print(type(D1))
+#type func displays type of data
+print (end="\n")
+D2={"Abandon":"Leave","war":"Violence","announce":"declare","Subside":"support"}
+print (D2)
+print (end="\n")
+D2 ["Sheep"]="Animal"
+print(D2)
+#adds key to the dictionary
+D2[27]="Number"
+print(end="\n")
+print(D2)
+del D2[27]
+#deletes the key from the dictionary
+print(end="\n")
+print(D2)
+print(end="\n")
+print(D2 ["war"])
+#prints specific key from dictionary
+print(end="\n")
+d3=D2.copy()
+#copies original dictionary to new dictionary
+del d3["Abandon"]
+print(d3)
+print(end="\n")
+print(D2.keys())
+#shows all keys
+print(end="\n")
+print(D2.items())
+#shows all arguments in the dict
+D2.popitem()
+print(end="\n")
+print(D2)
+D2.clear()
+print(D2)
+D2.update({"Carbon":"Element"})
+print(D2)
+#updates the dict with a key
