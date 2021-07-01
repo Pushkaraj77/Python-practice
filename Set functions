@@ -1,0 +1,28 @@
+#Sets in python
+s= set()
+print(type(s))
+print(end="\n")
+f=[1,2,3]
+s_from_list=set(f)
+print(set(f))
+s_from_list.add(4)
+#adds one element
+s_from_list.update([6,7])
+# adds mutliple elements can use [] or {}
+print(s_from_list)
+s_from_list.remove(1)
+#remove and discard are same 
+#clear erases all elements from set
+print(s_from_list)
+s1=set(f)
+g=[3,4,5]
+s2=set(g)
+print(s1.union(s2))
+print(s1.isdisjoint(s2))
+#s1.pop()
+#print(s1)
+print(s1.intersection(s2))
+print(s1-s2)
+#can also use .difference()
+print(s1^s2)
+#can also use .symmetric_difference()
