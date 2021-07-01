@@ -1,0 +1,4 @@
+print("Welcome to Python Dictionary".center(40))
+d1={"Phone":"Device","Apple":"Fruit","Iron":"metal","bottle":"container"}
+N1=input()
+print(d1[N1])
