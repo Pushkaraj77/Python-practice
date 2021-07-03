@@ -1,0 +1,18 @@
+# If, elif and else 
+'''
+Var1=2
+Var2=7
+Var3=57
+if Var3 > Var2 :
+	print(" Greater")
+'''
+Var1=50
+Var2=int(input())
+if Var1>Var2 :
+	print("Greater")
+	
+elif Var1==Var2 :
+	print("Equal")
+	
+else :
+	print("Lesser")
