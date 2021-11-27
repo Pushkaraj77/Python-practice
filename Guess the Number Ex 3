@@ -1,0 +1,40 @@
+'''
+no. of guesses 9
+print no. of guesses left
+No.of guesses he took to finish
+game over
+'''
+
+num=20
+guesses=1
+print("Welcome to guess the number")
+
+while(guesses<=9) :
+    g = int(input("The number is..."))
+
+    if 15<g<20 :
+        print("You're close select greater number")
+        no_of_guesses_left = 9-guesses
+        print("Number of guesses left",no_of_guesses_left)
+    elif 20<g<25 :
+        print("You're close select smaller number")
+        no_of_guesses_left = 9 - guesses
+        print("Number of guesses left",no_of_guesses_left)
+
+    elif g<20 :
+        print("Please select a greater number")
+        no_of_guesses_left = 9 - guesses
+        print("Number of guesses left",no_of_guesses_left)
+
+    elif g>20 :
+        print("Please select a smaller number")
+        no_of_guesses_left = 9 - guesses
+        print("Number of guesses left",no_of_guesses_left)
+
+    elif g==20 :
+        print("Congrats you won")
+        print("Took",guesses, "guesses to win")
+    guesses=guesses+1
+
+    if no_of_guesses_left==0 :
+        print("Sorry Game Over")
