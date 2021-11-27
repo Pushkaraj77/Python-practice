@@ -1,0 +1,28 @@
+print("Exercise 2 Faulty Calculater")
+# 45 * 3= 555, 56 + 3 = 77, 56/6 = 4
+print("Welcome to Python Calculator")
+print(end="\n")
+print("Enter first no.")
+n1 = int(input())
+print("Enter second no")
+n2 = int(input())
+print(end="\n")
+print("Select Operation")
+n3 = input("'+', '-', '*', '/'")
+
+if n1== 45 and n2== 3 and n3=='*' :
+    print("555")
+elif n1==56 and n2==9 and n3== '+' :
+    print("77")
+elif n1==56 and n2== 6 and n3== '/' :
+    print("4")
+elif n3=='*' :
+    print(n1*n2)
+elif n3== '+' :
+    print(n1+n2)
+elif n3== '-' :
+    print(n1-n2)
+elif n3== '/' :
+    print(n1/n2)
+else :
+    print("Error!! Check your inputs")
