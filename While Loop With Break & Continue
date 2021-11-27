@@ -1,0 +1,19 @@
+# welcome to while loop
+i=0
+
+'''
+while i < 5 :
+    print(i)
+    i+=1
+'''
+while(True) :
+    if i < 6 :
+        i = i+1
+        print(i,end=" ")
+        continue
+
+    print(i + 1, end= " ")
+    if(i==44) :
+
+        break
+    i = i +1
