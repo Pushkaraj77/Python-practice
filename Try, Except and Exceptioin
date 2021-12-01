@@ -1,0 +1,14 @@
+print("Try except and exception")
+# catches error and runs the program ahead
+
+print("Enter number 1")
+num1 = input()
+print("Enter numeber 2")
+num2 = input()
+
+try :
+    print("The sum of these two number is", int(num1) + int(num2))
+except Exception as e :
+    print(e,"Error type a number")
+
+print("It will print this line even after getting error for the previous argument")
