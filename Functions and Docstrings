@@ -1,0 +1,36 @@
+print(" Fucntions and docstrings ")
+
+# Function is something that operates and gives an output
+
+a=9
+b=8
+c = sum((a,b)) # sum takes a list or a tuple
+print(c)
+
+'''
+Function Types :
+1. Built-in
+2. User defined
+'''
+
+print("User defined functons")
+
+# def = defines a function
+# return = returns the value after executing the function\
+
+def function2(a, b) :
+    average = (a+b)/2
+    return average
+
+v =  function2(5,7) # you need to assign a variable to the function to use return
+print("\n",v)
+
+print("Docstirngs")
+# First string in a function
+
+def function2(a, b) :
+    '''This is a function which will calculate average of two numbers'''
+    average = (a + b) / 2
+    return average
+
+print(function2.__doc__)
