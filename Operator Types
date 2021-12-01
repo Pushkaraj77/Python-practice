@@ -1,0 +1,108 @@
+# Operators in python
+
+print("1. Arithmetic Operators")
+''' operators like :
++ Addition 
+- Substraction
+* Multiply
+/ Divide
+% Modulus
+** Exponent
+// Floor Division
+'''
+n1 = 1
+n2 = 3
+print(n1+n2)
+
+print("2. Assignment Operators")
+'''
+Assigns new value to already existing variable 
+
+Operators like :
++= add and assign
+-= subtract and assign
+*= multilpy and assign
+/ divide and assign
+%= modulus and assign
+**= exponent and assign
+//= floor divide and assign
+&= bitwise AND and assign
+|= bitwise OR and assign
+^= bitwise XOR and assign (only if)
+<<= bitwise left shit and assign
+>>= bitwise right shit and assign
+'''
+
+n3= 7
+n3+=3
+print(n3)
+
+print("3. Comparison Operators")
+'''
+Compares two statements or variables
+
+Operators like :
+== Equal
+!= Not equal
+< Less than
+> More than
+<= Less than or equal
+>= More than or equalo
+'''
+n4=6
+n5=9
+print(n4<n5)
+
+print("4. Logical Operators")
+'''
+Logic in arguments
+
+Operators like :
+and - both true
+or - one true
+not - Negation
+'''
+print(n4<7 and n5< 10)
+
+print("5. identity Operators")
+'''
+To return if the argument is true or false
+
+Operators like :
+is - returns true if both values are same
+is not - returns true if both values are not same
+'''
+a=7
+b=6
+print(a is b)
+
+print("6. Membership Operators")
+'''
+Checks if the required sequence or character exists in the list
+
+Operators like :
+in - returns true if the character is in the list
+not in - returns true if the character is not in the list
+'''
+list = [3,4,5,39,33,35,32]
+print(32 in list)
+
+print("7. Bitwise Operators")
+'''
+Binary code based operators
+
+Operators like :
+
+& AND 
+| OR
+^ XOR
+~ NOT
+<< Zero shift left
+>> Zero shift right
+
+0=00
+1=01
+2=10
+3=11
+'''
+print(1 & 3)
