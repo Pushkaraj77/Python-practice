@@ -1,0 +1,38 @@
+print("Welcome to Python Health Log\n")
+print("Press 1 to Add data or Press 2 to Retrieve previous data\n")
+choice_1 = int(input())
+
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+v = getdate()
+
+if choice_1 == 1:
+    print("Enter your Username\n")
+    Name_of_person = str(input())
+    f2 = open(Name_of_person + ".txt", "a")
+    print("Press 1 to add Diet or Press 2 to add Exercise")
+    choice_2 = int(input())
+    if choice_2 == 1:
+        print("Enter your Info now : ")
+        diet_info = input()
+        f2.write("DIET\n")
+        f2.write(str(v)+": "+diet_info+"\n") # str of v is necessary
+        print("Changes saved")
+
+    elif choice_2 == 2 :
+        print("Enter your Info now : ")
+        exercise_info = input()
+        f2.write("EXERCISE\n")
+        f2.write(str(v) + ": " + exercise_info + "\n")  # str of v is necessary
+        print("Changes saved")
+
+    f2.close()
+
+if choice_1 == 2 :
+    print("Write the Username you want to see the logs of :\n")
+    Name_of_person = str(input())
+    f3 = open(Name_of_person + ".txt")
+    print(f3.read())
+    f3.close()
