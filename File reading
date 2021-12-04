@@ -1,0 +1,31 @@
+# reading an existing file
+
+'''f =  open("Pushkaraj", "r")
+content = f.read()
+print(content)
+
+f.close()'''
+
+'''f =  open("Pushkaraj", "rt")
+content = f.read(3)
+print(content)
+
+content = f.read(3)
+print(content)
+f.close()'''
+
+# For printing single line in a file
+'''f =  open("Pushkaraj", "rt")
+for line in f :
+    print(line)
+f.close()'''
+
+# Read line
+'''f =  open("Pushkaraj", "rt")
+print(f.readline())
+f.close()'''
+
+#Readlines - reads line as a list
+f =  open("Pushkaraj", "rt")
+print(f.readlines())
+f.close()
