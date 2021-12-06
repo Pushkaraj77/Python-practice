@@ -1,0 +1,23 @@
+# l = 10 # Global Variable
+# #
+# # def function1(n) :
+# #     l = 5 # local variable
+# #     l = l + 45
+# #     print(l)
+#
+# def function1(n) :
+#     global l
+#     l = 5 # local variable
+#     l = l + 45
+#     print(l)
+#
+x = 18
+def harry() :
+    x = 20
+    def rohan() :
+        global x
+        x = 88
+        print(x)
+    rohan()
+    print(x)
+print(harry())
