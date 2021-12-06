@@ -1,0 +1,25 @@
+f = open("Pushkaraj","w")
+
+f.write("Harry is a good teacher")
+# replaces values in the file
+f.close()
+
+#To append
+
+f =  open("Pushkaraj", "a")
+# for adding values
+f.write("Let's master Python")
+f.close()
+
+# To check and update on the file
+
+f = open("Pushkaraj","a")
+a = f.write("let's master python")
+print(a) # returns no. of characters
+f.close()
+
+# Handle read and write both
+
+f = open("Pushkaraj","rt")
+print(f.read(1))
+f.write("thank you")
