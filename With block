@@ -1,0 +1,7 @@
+# Intialising with block
+
+with open("Pushkaraj") as f :
+    a = f.read(4)
+    print(a)
+
+# Block closes the file automatically
