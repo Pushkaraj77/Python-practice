@@ -1,0 +1,12 @@
+# Intializing seek and tell functions on files
+
+f = open("Pushkaraj")
+
+print(f.tell())
+# tells position of the pointer
+print(f.readline())
+print(f.tell())
+f.seek(0)
+print(f.readline())
+
+f.close()
