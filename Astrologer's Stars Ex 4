@@ -1,0 +1,17 @@
+# get an input no.
+# 2nd input as boolean Star
+# Boolean either True or False
+# print pattern based on True or False
+
+print("How many rows do you want?\n")
+n1 = int(input())
+print("Select 1 or 0\n")
+n2 = int(input())
+
+if n2 == 1 :
+    for i in range(0, n1 + 1) :
+        print("* "*int(i)) #int not necessary
+
+elif n2 == 0 :
+    for i in range(n1,0,-1) :
+        print("* "*i)
