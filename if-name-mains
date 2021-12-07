@@ -1,0 +1,10 @@
+def print1(string) :
+    return f" Hello {string}"
+
+def add(num1, num2) :
+    return num1 + num2 + 5
+print("Imported from", __name__)
+if __name__ == '__main__':
+    print(print1("Pushkaraj"))
+    o = add(4,6)
+    print(o)
