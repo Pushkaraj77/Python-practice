@@ -1,0 +1,9 @@
+lis = ["John", "Cena", "Randy", "Orton", "Sheamus", "Khali", "Jinder Mahal"]
+
+# for item in lis :
+#     print(item , "and", end = " ")
+#     print("other wwe players")
+
+
+a = " and ".join(lis)
+print(a, "other wwe players")
