@@ -1,0 +1,25 @@
+# args and kwargs help make the function take undefined(new) values as well
+
+def funargs(*args) :
+    print(args[0])
+
+lst = [ "Push", "Vedant", "Shardul", "Ansh" ]
+funargs(*lst)
+
+def funargs2(normal, *args) :
+    print(normal)
+    for item in args :
+        print(item)
+normal = "I'm a normal argument and the Students are :"
+
+funargs2(normal, *lst)
+
+def funargs3(normal, *args, **kwargs) :
+    print(normal)
+    for item in args :
+        print(item)
+
+print("Now these are our Herores")
+kw = {"Push" : "The Teacher", "Vedant" : "The Math genius", "Shardul" : "The Cadet", "Ansh" : "The Wholesome"}
+
+funargs3(normal, *lst, **kw)
