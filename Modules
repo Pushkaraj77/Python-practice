@@ -1,0 +1,14 @@
+# Modules are collection of functions
+
+import random
+
+random_number = random.randint(0, 4)
+print(random_number)
+
+rand = random.random()*100
+print(rand)
+
+lst = ["1", "2", "3", "4"]
+
+choice = random.choice(lst)
+print(choice)
