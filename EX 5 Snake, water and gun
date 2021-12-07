@@ -1,0 +1,65 @@
+# Use random choice
+# get snake, water or gun as system choice
+# input s, w or g from user
+# output who won
+# wse while loop
+# 10 chances, most score wins
+# print how many computer won and how many you won
+
+import random
+print("Welcome to Snake, Water Or Gun Game\n")
+lst = ['s', 'w', 'g']
+
+print("Choose S, W or G\n")
+round = 1
+Your_score = 0
+Comp_score = 0
+
+while (round <= 10) :
+    a = (random.choice(lst))
+    b = str(input())
+    c = b.lower()
+    if a == 's' and c == 'w' :
+        Comp_score += 1
+        print(f"Computer won.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+        round += 1
+
+    elif a == 'w' and c == 'g' :
+        Comp_score += 1
+        print(f"Computer won.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+        round += 1
+
+    elif a == 'g' and c == 's' :
+        Comp_score += 1
+        print(f"Computer won.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+        round += 1
+
+    elif a == 'w' and c == 's' :
+        Your_score += 1
+        print(f"You won.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+        round += 1
+
+    elif a == 'g' and c == 'w' :
+        Your_score += 1
+        print(f"You won.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+        round += 1
+
+    elif a == 's' and c == 'g' :
+        Your_score += 1
+        print(f"You won.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+        round += 1
+
+    elif a == c :
+        print(f"It was a Tie.\n Computer Score : {Comp_score} and Your Score : {Your_score}")
+
+    else :
+        print("Wrong !! Check your Input\n")
+
+if Your_score > Comp_score :
+    print(f"You won with {Your_score} points.\n Computer points : {Comp_score}")
+
+elif Your_score == Comp_score :
+    print(f"It was a TIE, Your score : {Your_score} and Computer score : {Comp_score}")
+
+else :
+    print(f"Computer won with {Comp_score} points.\n You Lost. Your points {Your_score} ")
