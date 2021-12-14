@@ -1,0 +1,61 @@
+# eyes - every 30 mins
+# physical activity - every 45 mins
+# input to stop alarm
+# log generation after input
+# alarm should be mp3
+# Use pygame module to play audio
+
+import time
+from pygame import mixer
+from datetime import datetime
+
+def musicloop(file, stopper) :
+    mixer.init()
+    mixer.music.load(file)
+    mixer.music.set_volume(0.7)
+    mixer.music.play()
+    while True :
+        a = str.lower(input())
+        if a == stopper :
+            mixer.music.stop()
+            break
+
+def logtime(msg) :
+    with open("health programme.txt", "a") as f :
+        f.write(f"{msg} {datetime.now()}\n")
+
+start_time = time.time()
+end_time = time.time() + 15
+
+while start_time < end_time :
+
+    def water_alarm() :
+        time.sleep(5)
+        water_drunk = 0
+        print(f"Time to drink water\n Please type Drank to stop the Alarm\n")
+        musicloop("alarm.mp3", "drank")
+        logtime("Drank water at")
+        water_drunk += 0.5
+        print(water_drunk)
+        global start_time
+        start_time += 5
+
+    def eye_alarm():
+        time.sleep(10)
+        print(f"Time to do eyes exercise\n Please type 'Done' to stop the Alarm\n")
+        musicloop("alarm.mp3", "done")
+        logtime("Eye Exercise done at")
+        global start_time
+        start_time += 5
+
+    def phy_alarm() :
+        time.sleep(15)
+        print(f"Time for workout\n Please type Done to stop the Alarm\n")
+        musicloop("alarm.mp3", "done")
+        logtime("Done workout at")
+        global start_time
+        start_time += 5
+
+    water_alarm()
+    eye_alarm()
+    phy_alarm()
