@@ -1,0 +1,21 @@
+class Employee :
+    no_of_leaves = 8
+    pass
+
+harry = Employee()
+rohan = Employee()
+
+harry.name = "Harry"
+rohan.name = "Rohan"
+
+print(harry.no_of_leaves)
+
+# To change value in class :
+Employee.no_of_leaves = 9 # This is called class variable
+
+# If you change value through object it won't change
+
+rohan.no_of_leaves = 10
+# will have no change on class but will make a new object instance variable - this is called instance variable
+
+print(Employee.__dict__) # shows info of the attribute
