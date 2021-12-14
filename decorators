@@ -1,0 +1,13 @@
+# Changes one function into another
+def dec1(func1) :
+    def nowexec() :
+        print("Executing now")
+        func1()
+        print("Executed")
+    return nowexec
+
+@dec1 # same as doing who_is_Push = dec1(who_is_Push)
+def who_is_Push() :
+    print("Push is a good boy")
+
+who_is_Push()
