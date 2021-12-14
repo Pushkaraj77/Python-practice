@@ -1,0 +1,36 @@
+class Employee :
+    no_of_leaves = 8
+    def printdetails(self) : # Self takes values, it can be altered by taking input also
+        return f"Name is {self.name}, Salary is {self.salary} and role is {self.role} "
+
+harry = Employee()
+rohan = Employee()
+
+harry.name = "Harry"
+harry.salary = 455
+harry.role = "Instructor"
+
+rohan.name = "Rohan"
+rohan.salary = 255
+rohan.role = "Student"
+
+print(harry.printdetails())
+# Here self has taken harry as itself
+
+# init - adding arguments to Employee()
+if __name__ == '__main__':
+
+    class Employee:
+        no_of_leaves = 8
+
+        def __init__(self, aname, asalary, arole ):
+            self.name = aname
+            self.salary = asalary
+            self.role = arole
+
+        def printdetails(self):
+            return f"Name is {self.name}, Salary is {self.salary} and role is {self.role} "
+
+    harry = Employee("Harry", "455", "Instructor")
+    # It is handled by init
+    print(harry.salary)
