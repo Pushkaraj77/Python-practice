@@ -1,0 +1,35 @@
+class Employee:
+    no_of_leaves = 8
+    var = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"Name is {self.name}, Salary is {self.salary} and role is {self.role} "
+
+class Player:
+    var = 9
+    def __init__(self, aname, asports, aposition):
+        self.name = aname
+        self.sports = asports
+        self.position = aposition
+
+    def printsports(self):
+        return f"Name is {self.name}, sport played is {self.sports} and position is {self.position}"
+
+class Programmer(Employee, Player) :
+    langauge = "C++"
+    def printlanguage(self):
+        print(self.langauge)
+
+# Thus programmer has inherited both Employee and Player
+# Sequence of subclasses matters
+
+karan = Programmer("Karan", "777", "Programmer")
+
+print(karan.var)
+
+# Here var is printed 8 because Employee class is given priority over Player class beacuse of the sequence.
