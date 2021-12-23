@@ -1,0 +1,21 @@
+"""
+- Public means any class in the program or outside the program(imported) can use that attribute
+
+- Protected means only class and sub classes in the program itself can use that attribute
+
+- Private means you cannot use the value simply, it is made complex
+
+"""
+
+class Employee():
+    var = 8 # Public
+    _protec = 9 # Protected uses 1 underscores
+    __private = 98 # Private uses 2 underscores
+
+# to access a private value you have to add class name in the beginning
+
+harry = Employee()
+
+print(harry._Employee__private)
+
+# polymorphism means taking numerous forms i.e. overriding methods or dundun methods
