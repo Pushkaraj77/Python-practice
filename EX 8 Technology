@@ -1,0 +1,26 @@
+# Make 3 classes electronic devices, pocket devices and phones
+
+class Phones():
+    name = ['Mobile', 'Smartphone']
+
+    def printphone(self):
+        return f"{self.name} is a phone"
+
+class Pocket_devices(Phones) :
+    name = ['Mobile', 'watch', 'Smartphone']
+
+    def printpocket(self):
+        return f"{self.name} is a pocket device"
+
+
+class Electronic_devices(Pocket_devices):
+    name = ['fan', 'TV', 'Mobile', 'Smartphone', 'Laptop', 'watch']
+
+    def printelectric(self):
+        return f"{self.name} is an electric device"
+
+mobile = Phones()
+watch = Pocket_devices()
+TV = Electronic_devices()
+
+print(mobile.printphone())
