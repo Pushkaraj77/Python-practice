@@ -1,0 +1,37 @@
+class A :
+    classvar1 = "I'm a class variable in class A"
+    def __init__(self):
+        self.var1 = "I'm inside class A's Constructor"
+        self.classvar1 = "Instance var in A"
+        self.special = "Special"
+
+class B(A) :
+    classvar1 = "I am in class B"
+
+    """ 
+    Here classvar1 in B has overrided classvar1 in A 
+      because the compiler first looks for the instance var in the main class before going into the inherited class
+      hence when it finds the var in the main class then the constructor in inherited class is not executed
+      i.e. it is OVERRIDED    
+    """
+
+    def __init__(self):
+        # the yellow highlight shows warning that the constructor of super class i.e. class A cannot be used
+        # this warning is removed when we add super() function in the CONSTRUCTOR
+        super().__init__()
+        self.var1 = "I am inside class B's constructor"
+        self.classvar1 = "Instance var in B"
+    # But here we assigned a new value to classvar1 thus this new value will be printed
+
+    """
+    The position of super function  matters beacuse if its placed after the self. values then it will print the values in the super class
+        not the main class, if it is used before the self. values then it will print values in the main class
+    """
+
+a = A()
+b = B()
+
+print(b.var1)
+
+print(b.special)
+# Here special was printed because we put super function which uses the super class even if it's overrided
