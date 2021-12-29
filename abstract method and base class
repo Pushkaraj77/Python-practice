@@ -1,0 +1,32 @@
+'''
+base class can said to be a metaclass/baseclass i.e. a mother class which contains some rules
+for the other classes that would inherit it.
+
+
+abstract method is used to make these rules inside the metaclass
+'''
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def printarea(self):
+        return 0
+'''
+Here shape is the metaclass/baseclass and printarea is the rule that other classes which 
+inherit Shape must contain with certain values/attributes
+'''
+class Rectangle(Shape):
+    type = "Rectangle"
+    sides = 4
+    def __init__(self):
+        self.length = 6
+        self.breadth = 7
+
+    def printarea(self):
+        return self.length * self.breadth
+    # if this function is not present it will give error cuz rule will not be followed
+rect1 = Rectangle()
+print(rect1.printarea())
+
+# we cannot make objects for metaclass/baseclass
