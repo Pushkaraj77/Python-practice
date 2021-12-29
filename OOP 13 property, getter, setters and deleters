@@ -1,0 +1,54 @@
+class Employee :
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+        # this is basic class making and explain func is part of it
+        # self.email = f"{fname}.{lname}@pushkarajcoder.com"
+        # this would print the email but it cannot make changes to the email hence we comment this and make a setter
+
+    # @property
+    # def email(self):# we have to make a property and put function below it to access setter and deleter this is called getter method
+    #         return f"{self.fname}.{self.lname}@pushkarajcoder.com"
+    # but we cannot let getter method change because some other objects might need it so we use setters
+
+    @property
+    def email(self):
+        if self.fname == None or self.lname == None:
+            return "Email is not set. Please set it using setter"
+        return f"{self.fname}.{self.lname}@pushkarajcoder.com"
+    # this helps deleter and does not show none on printing
+
+    @email.setter
+    def email(self, string):
+        print("Setting now")
+        names = string.split("@")[0]
+        self.fname = names.split(".")[0]
+        self.lname = names.split(".")[1]
+        # this setter will change the fname and lname w/o changing values in getter
+
+    @email.deleter
+    def email(self):
+        self.fname = None
+        self.lname = None
+        # so the getter reads this value and prints the text in it's function
+
+
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+
+lel = Employee("The", "Lel")
+
+print(lel.email)
+
+lel.fname = "Oh"
+print(lel.email)
+
+del lel.email
+print(lel.email)
+# the del func does not work w/o specifying the deleter in OOPs unlike normal coding
+
+lel.email = "Pushkaraj.Chauhan@coding.com"
+print(lel.email)
+# we can see that only fname and lname is changed and not the mail address
