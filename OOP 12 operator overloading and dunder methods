@@ -1,0 +1,48 @@
+'''
+ Dunder methods are methods or functions with '__' in the beginning and ending
+ they are also called construstors
+
+
+ Operator overloading means assigning a new functionality to an operator
+ so if you input print(emp1 + emp2 ) it will give error but if you make the add function
+ like below then it will work
+'''
+
+
+class Employee:
+    no_of_leaves = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    def __add__(self, other):
+        return self.salary + other.salary
+    # Here add is a dunder method that has overloaded the basic + function
+
+    def __truediv__(self, other):
+        return self.salary / other.salary
+    # Another overloading
+
+    def __repr__(self):
+        return f"Employee('{self.name}', {self.salary}, '{self.role}')"
+    # repr method is used to summarize the object properties for the developer hence it is written in short
+
+    def __str__(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+    # str method is used to summarize object properties for the end user hence it is more detialed than repr
+
+emp1 =Employee("Harry", 345, "Programmer")
+emp2 =Employee("Rohan", 55, "Cleaner")
+print(str(emp1))
+
+# str has priority over repr thus even if both the methods are present in the code str will be printed and repr will
+# -be ignored unless called in the code
