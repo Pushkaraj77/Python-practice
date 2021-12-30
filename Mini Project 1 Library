@@ -1,0 +1,106 @@
+# Create a library class
+# display book
+# lend book - (who owns the book if not present)
+# add book
+# return book
+
+# HarryLibrary = Library(listofbooks, library_name)
+
+
+#dictionary (books-nameofperson)
+
+# create a main function and run an infinite while loop asking
+# users for their input
+
+class Library :
+    def __init__(self, listofbooks, library_name):
+        self.books = listofbooks
+        self.libname = library_name
+        self.lendedbook = []
+
+    def displaybooks(self):
+        self.bookname = self.books
+        return f"This Library contains the following books \n \n {self.bookname}"
+
+    def lendbook(self):
+        lendbook = str.lower(input("which book do you want?"))
+        self.bookname = lendbook
+        self.username_dict = {}
+        if lendbook in self.books:
+            self.books.remove(lendbook)
+            self.lendedbook.append(lendbook)
+            self.username_dict.update({user:lendbook})
+            return f" The book {self.bookname} was added to your library card "
+        elif lendbook in self.lendedbook :
+            print({user:lendbook})
+            return f" Sorry this book is lended to another user please choose a different book"
+        else :
+            return f"Sorry we don't have the book {lendbook} in the library"
+
+    def addbook(self):
+        donatedbook = str.lower(input("which book do you want to donate?"))
+        self.bookname = donatedbook
+        self.books.append(donatedbook)
+        return f" You donated the book {self.bookname} Thank you"
+
+    def returnbook(self):
+        returned = str.lower(input("Which book do you want to return?"))
+        self.bookname = returned
+        self.books.append(returned)
+        self.lendedbook.remove(returned)
+        self.username_dict.update({user:None})
+        return f" You have returned {self.bookname} thank you "
+
+    # def admin(self):
+    #     admin_name = str(input("Please write admin name\n"))
+    #     password = str(input("Please write admin password\n"))
+    #     if admin_name == 'Pushkaraj' and password == 'Pushkaraj77@':
+    #         print(self.username_dict)
+    #     else :
+    #         print("Wrong credantials")
+
+
+Coderlibrary = Library(['harry potter', 'mobidick', 'geronimo stilton'],'Coderlibrary')
+
+if __name__ == '__main__':
+
+    print("Welcome to CoderLibrary\n")
+    # admin_access = str.lower(input("Press A for admin access or press B\n"))
+    # if admin_access =='a' else print(" Setting user profile..\n")
+    user = str.capitalize(input("Enter your username :\n"))
+    def system() :
+
+        print("What do you want to do?\n 1. Show book list \n 2. Lend book\n 3. Donate book\n 4. return book\n 5. Exit")
+        n1 = str.lower(input())
+
+        while True :
+            if n1 == 'show book list' :
+                print(Coderlibrary.displaybooks())
+
+            elif n1 == 'lend book' :
+                print(Coderlibrary.lendbook())
+
+            elif n1 == 'donate book':
+                print(Coderlibrary.addbook())
+
+            elif n1 == 'return book' :
+                print(Coderlibrary.returnbook())
+
+            elif n1 == 'exit' :
+                print('Thank you')
+                break
+            else :
+                print("Error check your Input")
+
+            wayahead()
+
+
+    def wayahead() :
+        print("\nPress Y to continue using library or Press N to exit")
+        choice = str.lower(input())
+        if choice == 'y' :
+            system()
+        else :
+            exit("Have a nice Day")
+
+    system()
