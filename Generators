@@ -1,0 +1,43 @@
+'''
+iterable - objects that can be iterated e.g tuple, string,list
+
+iterator - the method that iterates
+
+iteration - the change in the object is called iteration
+'''
+
+# yield - it is just like return but unlike return it starts the process from where it is stopped
+
+# generators are iterators that generate the values on the fly hence they don't take up much memory
+# generators don't run by calling them but they use the __next__ method
+
+# for c in a:
+#       print (a)
+#Here a is an iterable.
+
+"""
+Iterable - __iter__() or __getitem__()
+Iterator - __next__()
+Iteration -
+
+"""
+
+def gen(n):
+    for i in range(n):
+        yield i
+
+g = gen(3)
+print(g.__next__())
+print(g.__next__())
+print(g.__next__())
+# print(g.__next__())
+# I we print for the 4th time it will give us error
+
+# h = 546546
+# ier = iter(h)
+# print(ier.__next__())
+# print(ier.__next__())
+# print(ier.__next__())
+# for c in h:
+#     print(c)
+# if we uncomment this it will show error because int is not itera
