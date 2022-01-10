@@ -19,6 +19,9 @@ print(var1)
 var1.append(45)
 print(var1)
 #adds argument at the end
+var1.extend(15,18,12)
+print(var1)
+#adds multiple arguments at the end
 var1.insert(2,76)
 print(var1)
 #inserts argument according to given position
